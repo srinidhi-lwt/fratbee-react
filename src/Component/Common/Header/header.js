@@ -2,8 +2,7 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography';
 import styles from './header.css';
-import { unstable_Box as Box } from '@material-ui/core/Box';
-import RecipeReviewCard from './test';
+import  Box from '@material-ui/core/Box';
 
 class Header extends React.Component {
   render() {
@@ -23,7 +22,6 @@ class Header extends React.Component {
             Item 3
           </Box>
         </Box>
-        <RecipeReviewCard />
     </header>
     )
   }
