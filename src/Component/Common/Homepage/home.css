@@ -1,0 +1,42 @@
+.hero-area{
+    padding:100px 0;
+}
+.search-box{
+    margin:0px;
+    /* min-width:500px; */
+}
+.text-area-wrap{
+    min-width:600px;
+}
+@media (max-width:768px) {
+    .text-area-wrap {
+        min-width: 300px;
+    }
+}
+@media (max-width:480px){
+    .text-area-wrap {
+        min-width: 200px;
+    }
+}
+.search-button{
+    padding: 15px 20px !important;
+    border-radius: 0 !important;
+    position:relative;
+    left:-3px;
+}
+.search-wrap{
+    margin-top:50px;
+}
+.why-section{
+    margin-top: 40px;
+}
+.why-block{
+    margin-top:20px;
+}
+.why-block img{
+    margin:10px 0;
+    width:40px;
+}
+.category-card{
+    padding:1rem;
+}

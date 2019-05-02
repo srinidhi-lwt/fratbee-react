@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32">
+  <g fill="none" fill-rule="evenodd" transform="translate(0 -1)">
+    <polygon points="0 0 34 0 34 34 0 34"/>
+    <g stroke-width="2" transform="translate(2 3)">
+      <polyline stroke="#F36" stroke-linecap="square" points="4.95 27.9 0 22.95 4.95 18"/>
+      <path stroke="#F36" d="M1,23 L20,23 M10,5 L29,5"/>
+      <polyline stroke="#FF356F" stroke-linecap="square" points="28.95 9.9 24 4.95 28.95 0" transform="matrix(-1 0 0 1 52.95 0)"/>
+      <polygon stroke="#F36" stroke-linecap="square" points="20 18 30 18 30 28 20 28"/>
+      <rect width="10" height="10" stroke="#FF356F" stroke-linecap="square" rx="5"/>
+    </g>
+  </g>
+</svg>

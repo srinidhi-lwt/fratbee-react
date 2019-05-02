@@ -1,28 +1,29 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
-import styles from './header.css';
+import './header.css';
 import  Box from '@material-ui/core/Box';
+import Logo from './logo.svg';
+import Button from '@material-ui/core/Button';
 
 class Header extends React.Component {
   render() {
     return (
-      <header className={styles.header} >
-        <Box display="flex" p={1} bgcolor="background.paper">
-          <Box p={1} flexGrow={1} bgcolor="grey.300">
-            Item 1
+        <AppBar color="default" className="appHeader" >
+          <Box display="flex" p={1}>
+            <Box p={1} flexGrow={1}>
+              <img src={Logo} className="logo" / >
+            </Box>
+            <Box p={1} >
+              <Button className="link about" size="medium">About</Button>
+            </Box>
+            <Box p={1}>
+              <Button className="link" size="medium"> Login </Button>
+            </Box>
+            <Box p={1}>
+             <Button variant="contained" color="secondary" className="link" size="medium">Signup</Button>
+            </Box>
           </Box>
-          <Box p={1}  >
-            Item 2
-          </Box>
-          <Box p={1} bgcolor="grey.300">
-            Item 3
-          </Box>
-          <Box p={1} bgcolor="grey.300">
-            Item 3
-          </Box>
-        </Box>
-    </header>
+        </AppBar>
     )
   }
 }
