@@ -28,7 +28,7 @@
     margin-top:50px;
 }
 .why-section{
-    margin-top: 40px;
+    margin: 80px 0;
 }
 .why-block{
     margin-top:20px;
@@ -39,4 +39,16 @@
 }
 .category-card{
     padding:1rem;
+    text-align: center;
+}
+.category-card img{
+    margin-bottom: 1rem;
+}
+.categories-title {
+    margin-bottom:2rem !important;
+}
+.image-bg{
+    width:100%;
+    margin:0px;
+    padding: 0px;
 }
