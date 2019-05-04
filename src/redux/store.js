@@ -1,9 +1,9 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { FirstReducer } from './reducer/FirstReducer'
+import { SearchCollegeReducer } from './reducer/SearchCollegeReducer'
 import thunk from 'redux-thunk';
 
 const rootReducer = combineReducers({
-   FirstReducer
+   SearchCollegeReducer
 })
 
 const store = createStore(rootReducer, applyMiddleware(thunk))

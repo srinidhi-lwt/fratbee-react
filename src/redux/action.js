@@ -4,15 +4,17 @@ export const getCollegeThunk = (searchString) => {
   return(dispatch) => {
     dispatch(userLoading());
 
-    axios.get('http://localhost:3001/api/v1/colleges/search/' + searchString)
-    .then((response) => {
-        console.log(response)
-        dispatch(userSuccess(response))
-    })
-    .catch((err) => {
-      console.log(err)
-        dispatch(userError(err))
-    })
+    searchString.length >= 2 ?
+      axios.get('http://localhost:3001/api/v1/colleges/search/' + searchString)
+      .then((response) => {
+          console.log(response)
+          dispatch(userSuccess(response))
+      })
+      .catch((err) => {
+        console.log(err)
+          dispatch(userError(err))
+      })
+    : dispatch(userSuccess(''))
   }
 }
 

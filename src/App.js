@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
 import Listing from './Component/Listings/listings';
-import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { BrowserRouter, Route } from 'react-router-dom'
 import Header from './Component/Common/Header/header';
 import Footer from './Component/Common/Foter/foter';
+import { connect } from 'react-redux'
 
 const theme = createMuiTheme({
   typography: {
@@ -40,19 +41,33 @@ const theme = createMuiTheme({
 });
 
 
-function App() {
-  return (
-    <BrowserRouter>
-    <Route path = "/" exact render = { () => <MuiThemeProvider theme = {theme} >
-        < Listing />
-      </MuiThemeProvider> }/>
-    <Route path = "/show" exact render = { () => <React.Fragment>
-      <Header/>
-      <Footer/>
-    </React.Fragment> }/>
-    </BrowserRouter>
-    
-  );
+class App extends React.Component {
+  render () {
+    return (
+      <BrowserRouter>
+      <Route path = "/" exact render = { () => <MuiThemeProvider theme = {theme} >
+          < Listing />
+          <div>
+            { this.props.colleges && this.props.colleges.map((ele, index) => {
+              return  <div key = {index}>{ ele.name }</div>
+            }) }
+          </div>
+        </MuiThemeProvider> }/>
+      <Route path = "/show" exact render = { () => <React.Fragment>
+        <Header/>
+        <Footer/>
+      </React.Fragment> }/>
+      </BrowserRouter>
+    );
+  }
 }
 
-export default App;
+
+const mapStoreToProps = (store) => {
+  return {
+    colleges: store.SearchCollegeReducer.data,
+    
+  }
+}
+
+export default connect(mapStoreToProps)(App);
