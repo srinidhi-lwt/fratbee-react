@@ -7,6 +7,22 @@
 .link span{
     text-transform:none;
 }
+.college-name{
+    padding: 0 24px 0 5px;
+    margin-left: 10px;
+    display:inline-block;
+    border-left: 2px solid #000000;
+    font-size: 12px;
+    position: relative;
+    cursor:pointer;
+}
+.college-name svg{
+    position: absolute;
+    right:0;
+    top: 0px;
+    width:16px;
+    height:16px;
+}
 @media(max-width:480px){
     .about {
         display: none !important;
