@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Listing from './Component/Listings/listings';
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
+import { BrowserRouter, Route } from 'react-router-dom'
 
 const theme = createMuiTheme({
   typography: {
@@ -39,9 +40,13 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <MuiThemeProvider theme = {theme} >
-      < Listing />
-    </MuiThemeProvider>
+    <BrowserRouter>
+    <Route path = "/" exact render = { () => <MuiThemeProvider theme = {theme} >
+        < Listing />
+      </MuiThemeProvider> }/>
+    <Route path = "/show" exact render = { () => 'Another Page' }/>
+    </BrowserRouter>
+    
   );
 }
 
