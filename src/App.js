@@ -3,6 +3,8 @@ import './App.css';
 import Listing from './Component/Listings/listings';
 import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 import { BrowserRouter, Route } from 'react-router-dom'
+import Header from './Component/Common/Header/header';
+import Footer from './Component/Common/Foter/foter';
 
 const theme = createMuiTheme({
   typography: {
@@ -44,7 +46,10 @@ function App() {
     <Route path = "/" exact render = { () => <MuiThemeProvider theme = {theme} >
         < Listing />
       </MuiThemeProvider> }/>
-    <Route path = "/show" exact render = { () => 'Another Page' }/>
+    <Route path = "/show" exact render = { () => <React.Fragment>
+      <Header/>
+      <Footer/>
+    </React.Fragment> }/>
     </BrowserRouter>
     
   );
