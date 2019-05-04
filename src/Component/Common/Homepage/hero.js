@@ -1,12 +1,20 @@
 import React from 'react';
 import './home.css';
 import Box from '@material-ui/core/Box';
+import { connect } from 'react-redux'
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import { getCollegeThunk } from '../../../redux/action';
 
 class Hero extends React.Component {
+  
+    getColleges = (e) => {
+      console.log(e.target.value)
+      this.props.dispatch(getCollegeThunk(e.target.value))
+    }
+  
   render() {
     return (
         <Box bgcolor="grey.100" className="hero-area">
@@ -23,6 +31,7 @@ class Hero extends React.Component {
                                 margin="none"
                                 variant="outlined"
                                 fullWidth= {true}
+                                onChange = { this.getColleges }
                             />
                         </Box>
                         <Box>
@@ -35,4 +44,4 @@ class Hero extends React.Component {
     )
   }
 }
-export default Hero;
+export default connect()(Hero);

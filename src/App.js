@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Listing from './Component/Listings/listings';
-import {MuiThemeProvider,createMuiTheme} from '@material-ui/core/styles';
+import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   typography: {

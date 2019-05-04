@@ -1,7 +1,6 @@
 import React from 'react';
 import './foter.css';
 import Box from '@material-ui/core/Box';
-import Typography from '@material-ui/core/Typography';
 
 class Footer extends React.Component {
   render() {

@@ -7,9 +7,6 @@ import Infosection from '../Common/Homepage/infosection';
 import Footer from '../Common/Foter/foter';
 
 
-
-
-
 class Listing extends React.Component {
   render() {
     return (
